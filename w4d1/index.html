@@ -1,7 +1,24 @@
 <html>
   <head>
-  <title>A Very Very Special Recipe</title>
+    <title>Special Recipe</title>
+    <meta name="Special Recipe Description" content="The most beautiful and delectable recipe known to mankind's greatest chefs. Made from 100% real juice (from concentrate).">
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="review-submit-example.js"/>
+    <link rel="stylesheet" type="text/css" href="somefile.css"/>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-12345678-9', 'auto');
+      ga('send', 'pageview');
+
+    </script>
   <head>
+
   <body>
     <header>
       <img src="https://1871.com/wp-content/uploads/2016/09/App-Academy-logo.jpeg">
@@ -14,6 +31,7 @@
         </ul>
       </nav>
     </header>
+
     <aside>
       <h2 id="second">Ingredients</h2>
       <p>You are going to need:<p>
@@ -29,6 +47,7 @@
         <li>Frosting</li>
       </ol>
     </aside>
+
     <section>
       <figure>
         <img src="http://assets.culvers.com/menu-item-detail/800/img-banana-split.png">
@@ -38,8 +57,10 @@
           looks amazing!
         </figcaption>
       </figure>
+
       <h2 id ="first">My Secret Dessert!</h2>
       <p>The picture has nothing to do with the recipe. Let's make some brownies instead!</p>
+
       <h2 id="third">Recipe</h2>
       <ol>
         <li>Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan.</li>
@@ -49,6 +70,48 @@
         <li>Bake in preheated oven for 25 to 30 minutes. Do not overcook.</li>
       </ol>
     </section>
+
+    <section id="reviews">
+
+      <h2>Review</h2>
+
+      <form id="review-form" action="/reviews" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="review" value="">
+
+        <br>
+
+        <label for="rating">Rating</label>
+        1<input id="1" type="radio" name="button" value="1" checked>
+        2<input id="2" type="radio" name="button" value="2">
+        3<input id="3" type="radio" name="button" value="3">
+        4<input id="4" type="radio" name="button" value="4">
+        5<input id="5" type="radio" name="button" value="5">
+
+        <br>
+
+        <label for="expertise">Cooking Expertise</label>
+        <select name="Cooking Expertise">
+          <option disabled selected>--Select Cooking Expertise--</option>
+          <option value="1">Never Cook</option>
+          <option value="2">Rarely Cook</option>
+          <option value="3">Sometimes Cook</option>
+          <option value="4">Cooking is a Hobby</option>
+          <option value="5">Cooking Everyday</option>
+          <option value="6">Professional Chef</option>
+        </select>
+
+        <br><br>
+
+        <label>Review<br>
+          <textarea name="review" rows="8" cols="80"></textarea>
+        </label>
+
+        <br>
+
+        <input type="submit" value="Submit Review">
+      </form>
+    </section>
     <footer>
       <p>Thanks
         <a href="http://allrecipes.com/recipe/10549/best-brownies/">Angie</a>
@@ -56,4 +119,5 @@
       </p>
     </footer>
   </body>
+
 </html>
